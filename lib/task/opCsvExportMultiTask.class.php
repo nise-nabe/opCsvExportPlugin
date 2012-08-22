@@ -73,7 +73,7 @@ class opCsvExportMultiTask extends opMultiExecutableTaskBaseTask
 
     $i = 0;
     $count = $this->count;
-    $header = true;
+    $header = 'true';
 
     return function() use (&$i, $count, $max, &$header)
     {
@@ -89,7 +89,7 @@ class opCsvExportMultiTask extends opMultiExecutableTaskBaseTask
       );
 
       $i += $count;
-      $header = false;
+      $header = 'false';
 
       return $result;
     };
