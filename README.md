@@ -23,3 +23,34 @@ SNS 内メンバのデータを csv 形式で出力する OpenPNE のプラグ�
 <td>header</td><td>各データ名を csv の最初に付与するか true/false </td><td>true</td>
 </tr>
 </table>
+
+# Using Extendsion Plugin (experimental)
+
+通常の実行では大量がいた場合にメモリや実行時間によって制約を受ける場合があるため、複数プロセスで実行して継続的に実行可能にしている。
+
+## Required
+
+opMultiExecutablePlugin
+
+## How To use
+
+下記コマンドを実行
+
+    ./symfony opCsvExport:export-multi
+
+## Options
+
+<table>
+<tr>
+<th>オプション名</th><th>詳細</th><th>デフォルト値</th>
+</tr>
+<tr>
+<td>number</td><td>一プロセスで処理するメンバ数 整数値 (inclusive)</td><td>1</td>
+</tr>
+<tr>
+<td>to</td><td>メンバID 終了位置 整数値 (exxlusive)</td><td>なし（最後まで）</td>
+</tr>
+<tr>
+<td>header</td><td>各データ名を csv の最初に付与するか true/false </td><td>true</td>
+</tr>
+</table>
